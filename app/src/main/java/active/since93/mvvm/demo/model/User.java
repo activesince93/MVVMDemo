@@ -17,7 +17,7 @@ public class User implements Serializable {
     @SerializedName("cell") public String cell;
     @SerializedName("picture") public Picture picture;
 
-    private String fullName;
+    public String fullName;
 
     public String getFullName() {
         return name.title + " " + name.first + " " + name.last;

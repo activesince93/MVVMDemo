@@ -68,6 +68,7 @@ ext {
 
     glide = 'glide'
     circleImageView = 'circleimageview'
+
     mockito = 'mockito-core'
     robolectric = 'robolectric'
     junit = 'junit'
