@@ -2,10 +2,10 @@
 Android MVVM and DataBinding sample app to understand how we can implement this architecture.
 
 ### Libraries used
-- [AppCompat, RecyclerView an DesignLibrary]
-- [Data binding]
-- [Retrofit 2]
-- [Glide]
+- AppCompat, RecyclerView an DesignLibrary
+- Data binding
+- Retrofit 2
+- Glide
 
 ### Developed By
 - Darshan Parikh - [parikhdarshan36@gmail.com](mailto:parikhdarshan36@gmail.com)
