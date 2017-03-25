@@ -47,7 +47,6 @@ ext {
     mockitoVersion = '1.10.19'
     robolectricVersion = '3.0'
     junitVersion = '4.12'
-    rxAndroidVersion = '2.0.1'
 
     // Packages
     supportPackage = 'com.android.support'
@@ -57,12 +56,10 @@ ext {
     mockitoPackage = 'org.mockito'
     robolectricPackage = 'org.robolectric'
     junitPackage = 'junit'
-    rxAndroidPackage = 'io.reactivex.rxjava2'
 
     // Dependency
     appcompat = 'appcompat-v7'
     recyclerView = 'recyclerview-v7'
-    cardView = 'cardview-v7'
     design = 'design'
     supportAnnotations = 'support-annotations'
 
@@ -70,7 +67,6 @@ ext {
     retrofitConverterGson = 'converter-gson'
 
     glide = 'glide'
-    rxAndroid = 'rxandroid'
     circleImageView = 'circleimageview'
     mockito = 'mockito-core'
     robolectric = 'robolectric'
@@ -87,7 +83,6 @@ dependencies {
     // Google support
     compile buildDependency(supportPackage, appcompat, supportVersion)
     compile buildDependency(supportPackage, recyclerView, supportVersion)
-    compile buildDependency(supportPackage, cardView, supportVersion)
     compile buildDependency(supportPackage, design, supportVersion)
     compile buildDependency(supportPackage, supportAnnotations, supportVersion)
 
@@ -97,9 +92,6 @@ dependencies {
 
     // Glide
     compile buildDependency(glidePackage, glide, glideVersion)
-
-    // RxAndroid
-    compile buildDependency(rxAndroidPackage, rxAndroid, rxAndroidVersion)
 
     // Circular imageView
     compile buildDependency(circleImageViewPackage, circleImageView, cirlceImageViewVersion)
