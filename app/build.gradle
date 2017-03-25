@@ -44,8 +44,6 @@ ext {
     retrofitVersion = '2.2.0'
     glideVersion = '3.7.0'
     cirlceImageViewVersion = '2.1.0'
-    mockitoVersion = '1.10.19'
-    robolectricVersion = '3.0'
     junitVersion = '4.12'
 
     // Packages
@@ -53,8 +51,6 @@ ext {
     retrofitPackage = 'com.squareup.retrofit2'
     glidePackage = 'com.github.bumptech.glide'
     circleImageViewPackage = 'de.hdodenhof'
-    mockitoPackage = 'org.mockito'
-    robolectricPackage = 'org.robolectric'
     junitPackage = 'junit'
 
     // Dependency
@@ -69,8 +65,6 @@ ext {
     glide = 'glide'
     circleImageView = 'circleimageview'
 
-    mockito = 'mockito-core'
-    robolectric = 'robolectric'
     junit = 'junit'
 }
 
@@ -98,8 +92,6 @@ dependencies {
     compile buildDependency(circleImageViewPackage, circleImageView, cirlceImageViewVersion)
 
     // Testing dependencies
-    compile buildDependency(mockitoPackage, mockito, mockitoVersion)
-    compile buildDependency(robolectricPackage, robolectric, robolectricVersion)
     compile buildDependency(junitPackage, junit, junitVersion)
 }
 

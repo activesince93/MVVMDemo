@@ -6,6 +6,7 @@ Android MVVM and DataBinding sample app to understand how we can implement this 
 - Data binding
 - Retrofit 2
 - Glide
+- JUnit
 
 ### Developed By
 - Darshan Parikh - [parikhdarshan36@gmail.com](mailto:parikhdarshan36@gmail.com)
