@@ -1,0 +1,115 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "active.since93.mvvm.demo"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+}
+
+ext {
+    // Versions
+    supportVersion = '25.0.1'
+    retrofitVersion = '2.2.0'
+    glideVersion = '3.7.0'
+    cirlceImageViewVersion = '2.1.0'
+    mockitoVersion = '1.10.19'
+    robolectricVersion = '3.0'
+    junitVersion = '4.12'
+    rxAndroidVersion = '2.0.1'
+
+    // Packages
+    supportPackage = 'com.android.support'
+    retrofitPackage = 'com.squareup.retrofit2'
+    glidePackage = 'com.github.bumptech.glide'
+    circleImageViewPackage = 'de.hdodenhof'
+    mockitoPackage = 'org.mockito'
+    robolectricPackage = 'org.robolectric'
+    junitPackage = 'junit'
+    rxAndroidPackage = 'io.reactivex.rxjava2'
+
+    // Dependency
+    appcompat = 'appcompat-v7'
+    recyclerView = 'recyclerview-v7'
+    cardView = 'cardview-v7'
+    design = 'design'
+    supportAnnotations = 'support-annotations'
+
+    retrofit = 'retrofit'
+    retrofitConverterGson = 'converter-gson'
+
+    glide = 'glide'
+    rxAndroid = 'rxandroid'
+    circleImageView = 'circleimageview'
+    mockito = 'mockito-core'
+    robolectric = 'robolectric'
+    junit = 'junit'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // Google support
+    compile buildDependency(supportPackage, appcompat, supportVersion)
+    compile buildDependency(supportPackage, recyclerView, supportVersion)
+    compile buildDependency(supportPackage, cardView, supportVersion)
+    compile buildDependency(supportPackage, design, supportVersion)
+    compile buildDependency(supportPackage, supportAnnotations, supportVersion)
+
+    // Retrofit
+    compile buildDependency(retrofitPackage, retrofit, retrofitVersion)
+    compile buildDependency(retrofitPackage, retrofitConverterGson, retrofitVersion)
+
+    // Glide
+    compile buildDependency(glidePackage, glide, glideVersion)
+
+    // RxAndroid
+    compile buildDependency(rxAndroidPackage, rxAndroid, rxAndroidVersion)
+
+    // Circular imageView
+    compile buildDependency(circleImageViewPackage, circleImageView, cirlceImageViewVersion)
+
+    // Testing dependencies
+    compile buildDependency(mockitoPackage, mockito, mockitoVersion)
+    compile buildDependency(robolectricPackage, robolectric, robolectricVersion)
+    compile buildDependency(junitPackage, junit, junitVersion)
+}
+
+static String buildDependency(String pack, String dependency, String version) {
+    return "${pack}:${dependency}:${version}"
+}

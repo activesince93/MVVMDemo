@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userListViewModel"
+            type="active.since93.mvvm.demo.viewmodel.UserListViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:visibility="@{userListViewModel.recyclerViewVisibility}"
+            tools:list_item="@layout/item_user" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:onClick="@{userListViewModel::onClickFAB}"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_add_24dp" />
+
+        <TextView
+            android:id="@+id/txt_empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@{userListViewModel.emptyViewText}"
+            android:textColor="@color/gray"
+            android:textSize="24sp"
+            app:visibility="@{userListViewModel.emptyViewVisibility}" />
+
+    </RelativeLayout>
+
+</layout>

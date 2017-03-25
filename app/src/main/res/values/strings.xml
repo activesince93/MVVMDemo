@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MVVMDemo</string>
+    <string name="no_users_found">No users found</string>
+    <string name="press_fab_to_load_users">Press FAB to load users</string>
+    <string name="some_error_occurred">Sme error occurred</string>
+    <string name="user_list">User list</string>
+    <string name="github">GitHub</string>
+</resources>
