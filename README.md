@@ -1,5 +1,5 @@
 # MVVMDemo
-Android MVVM and DataBinding sample app to understand how we can implement this architecture.
+Android MVVM and DataBinding sample app to understand how we can implement this architecture. Created with the help of [erikcaffrey/People-MVVM](https://github.com/erikcaffrey/People-MVVM)
 
 ### Libraries used
 - AppCompat, RecyclerView, DesignLibrary
